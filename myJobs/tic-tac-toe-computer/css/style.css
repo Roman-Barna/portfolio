@@ -1,0 +1,135 @@
+/* task 1 */
+/* 
+.container {
+display: flex;
+width: 650px;
+justify-content: center;
+align-items: center;
+}
+#slide {
+    border: 5px solid #fff;
+    box-shadow: 0 0 24px #000;
+    background-size: cover;
+
+}
+#btn__prev {
+margin-right: 15px;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+align-items: center;
+background-color: #000;
+color: #fff;
+box-shadow: 0 0 16px #000;
+cursor: pointer;
+}
+#btn__next{
+margin-left: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0 0 16px #000;
+    cursor: pointer;
+}
+#btn__next:hover{
+    transform: scale(1.1);
+    transition: 0.5s ease;
+}
+#btn__prev:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease;
+} */
+
+/* task 2 */
+.container {
+    border: 3px solid #000;
+    width: 600px;
+}
+.row {
+    display: flex;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+    font-size: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.win__text {
+    font-size: 120px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.win__text__block {
+    display: block;
+}
+.block__result {
+    background-color: #000;
+    color: #fff;
+    padding: 15px;
+    font-size: 20px;
+    display: inline-block;
+    position: fixed;
+    right: 400px;
+    top: 300px;
+    border: 2px dotted #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 16px #000;
+    cursor: cell;
+}
+.block__result > ul {
+    padding:0 15px;
+}
+.win__y {
+    margin: 10px 0;
+}
+.result {
+    list-style-type: none;
+}
+/* 
+body {
+    display: flex;
+        justify-content: center;
+}
+
+.game__container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#game {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+}
+#reset {
+    margin-top: 15px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 16px #000;
+    border: 1px dotted #fff;
+    padding: 5px;
+    cursor: pointer;
+}
+#game > div {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#game > div > span {
+    font-size: 70px;
+} */

@@ -1,0 +1,131 @@
+.box-contaiter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 3px dotted #000;
+}
+.box {
+    height: 100px;
+    width: 100px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.none {
+    display: none;
+}
+.none__block {
+    display: block;
+}
+
+#code-output {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 30px 30px 0 0;
+    box-shadow: 0 0 16px #000;
+    padding: 15px;
+    text-indent: 17px;
+}
+.code-container {
+    position: relative;
+}
+#btnCopy {
+    position: absolute;
+    top: 35px;
+    right: 25px;
+    box-shadow: 0 0 16px #000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.pos__a {
+    position: absolute;
+    top: -35px;
+    right: 10px;
+}
+.pos__inp {
+    right: 30px;
+}
+.pos__check {
+right:50px;
+
+}
+.pos__r {
+    position: relative;
+}
+.text__inpu, #text__inpu, #text__inpu1, .text__inpus {
+    margin-left: 5px;
+}
+.pfixed {
+    position: fixed;
+    width: 50%;
+    bottom: 0;
+    right: 0;
+}
+body {
+    position: relative;
+    font-family: 'Playfair Display', serif;
+    background-color: rgba(165, 163, 163, 0.274);
+    
+}
+.copy {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    background-color: rgb(77, 67, 67);
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 20px;
+text-align: center;
+border: 2px dotted #fff;
+box-shadow: 0 0 24px #000;
+border-radius: 10px;
+opacity: 0.7;
+}
+#btnCopy:hover {
+    transform: scale(1.1);
+    transition: 0.7s ease;
+    box-shadow: 0 0 24px #000;
+}
+.container {
+    box-shadow: 10px 10px 16px #000;
+
+}
+
+.left__position {
+    left: 55px;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #fff;
+    text-shadow: 2px 2px 2px #fff;
+    font-weight: 500;
+    background-color: rgb(76, 78, 77);
+}
+
+
+.accordion-button {
+    background-color: rgb(38, 39, 38);
+    color: #fff;
+}
+
+.accordion-button:focus {
+background-color: rgb(76, 78, 77);
+    color: #fff;
+    box-shadow: 0 0 16px #fff;
+    color: rgb(233, 255, 250);
+}
+
+.accordion-button:not(.collapsed)::after {
+background-image: none;
+}
+
+#BackgroundColorId {
+    height: 35px;
+    transform: skew(-10deg);
+    box-shadow: 0 0 12px #000;
+    align-items: stretch;
+}

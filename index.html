@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- slick -->
+    <link rel="stylesheet" href="./lib/slick-1.8.1 (1)/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="./lib/slick-1.8.1 (1)/slick-1.8.1/slick/slick-theme.css">
+    <!-- scrollreveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- alertyfly -->
+    <link rel="stylesheet" href="./lib/alertyfly/alertify.min.css">
+    <link rel="stylesheet" href="./lib/alertyfly/themes/default.min.css">
+    <link rel="stylesheet" href="./lib/alertyfly/themes/semantic.min.css">
+    <link rel="stylesheet" href="./lib/alertyfly/themes/bootstrap.min.css">
+    <!--  -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link id="oldLinkCss" rel="stylesheet" href="./css/portfolio.css">
+
+    <link id="linkCss" rel="stylesheet" href="">
+    <link rel="stylesheet" href="./css/windowModal.css">
+    <!-- <link rel="stylesheet" href="./myJobs/lendingSite1/css/style.css"> -->
+</head>
+
+<body>
+
+    <!-- modal window -->
+    <div class="modal__window__block">
+        <div class="row modal__header">
+            <div class="close__window"></div>
+
+        </div>
+        <div class="content__html"></div>
+    </div>
+
+    <div class="loading__container">
+        <img id="loading" src="./icons/icon.gif" alt="">
+    </div>
+
+
+
+    <nav class="navbar fixed-top navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img class="logo__footer" src="./icons/logo__menu.png" alt=""></a>
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active-navBar" data-id="home" aria-current="page" href="">Home<div
+                                class="after__link"></div></a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-id="AboutMe" href="">About me<div class="after__link"></div>
+                        </a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-id="myWorks" href="">My works<div class="after__link"></div>
+                        </a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-id="contact" href="">Contact<div class="after__link"></div>
+                        </a>
+
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- header -->
+
+    <div class="container-fluid">
+        <main>
+            <!-- home -->
+            <section id="home">
+                <div class="hhiden"></div>
+                <div class="container-fluid">
+                    <div class="parallax-home ">
+                        <div class="block__title__contacts text-center ">
+                            <div class='console-container'><span id='text'></span>
+                                <div class='console-underscore' id='console'>&#95;</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row home__block">
+                    <div class="col-12 ">
+                        <h3 class="text-center home__block__title m-5">
+                            Phase of my education</h3>
+                    </div>
+                    <div class="col-12 d-flex justify-content-center">
+                        <div class="hr__home">
+                            <div class="circle"></div>
+
+                            <div class="block__hr  block__hr__text__HTML">HTML</div>
+                            <div class="block__hr block__hr__text__HTML__right primary">1/2 mounth</div>
+                            <div class="block__hr block__hr__text__CSS">CSS</div>
+                            <div class="block__hr block__hr__text__CSS__right">2/3 mounth</div>
+                            <div class="block__hr block__hr__text__JS">JS</div>
+                            <div class="block__hr block__hr__text__JS__right">1/2 year</div>
+
+                            <div class="circle circle__center"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+            </section>
+
+            <!-- aboutMe -->
+
+            <section id="aboutMe">
+                <div class="conta   iner">
+                    <div class="parallax parallax-aboutMe">
+                        <div class="hhiden"></div>
+                        <div class="block__title__contacts text-center ">
+                            <h1 id="text__about_title">About me</h1>
+                            <nav aria-label="breadcrumb ">
+                                <ul class="breadcrumb d-flex justify-content-center">
+                                    <li class="nav-item breadcrumb-item">
+                                        <a class="nav-link" data-id="home" aria-current="page" href="#home">Home</a>
+                                    </li>
+
+
+                                    <li class="breadcrumb-item active" aria-current="page">About me</li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about__container">
+                    <div class="container container__background">
+                        <div class="row">
+                            <div class="adaptiveAbout__row col-xl-12 col-md-6 col-12 d-flex justify-content-center p-5">
+                                <img class="show  about__my__foto" src="./images/myPhoto.jpg" alt="">
+                            </div>
+
+                            <div class="adaptiveAbout__row mt-3  col-xl-6 col-md-6 col-12 offset-xl-3 offset-md-0 p-4 ">
+                                <h2 class="show hide__show roboto">Hello Everybody, I AM</h2>
+                                <h3 class="show hide__show roboto">Roman Barna</h3>
+                                <h4 class="show hide__show roboto">JUNIOR FRONTEND DEVELOPER</h4>
+                                <p class="show hide__show Ibarra">
+                                    I am currently looking for a job for a trainee or junior position. You can view my
+                                    works in My Works.
+                                </p>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <ul>
+                                            <li class="hide__show Ibarra"><i
+                                                    class="bi bi-calendar3 bi__myinfo__logo"></i> <span>11th March,
+                                                    1996</span></li>
+                                            <li class="hide__show Ibarra">
+                                                <i class="bi bi-telephone bi__myinfo__logo"></i>
+                                                <a class="phone__number" href="tel:+380732093038">+38 (073)
+                                                    209-30-38</a>
+
+                                            </li>
+                                            <li class="hide__show Ibarra"><i
+                                                    class="bi bi-envelope-exclamation bi__myinfo__logo"></i>
+                                                <span>bilkasnikers@gmail.com</span>
+                                            </li>
+                                            <li class="hide__show Ibarra"><i
+                                                    class="bi bi-house-door bi__myinfo__logo"></i> <span>Horodotska
+                                                    Street, Lviv
+
+                                                </span></li>
+                                        </ul>
+
+
+
+                                        <div class="row ">
+                                            <div class="col-4 d-flex width100 ">
+
+                                                <div class="col-1 parentBi__about">
+                                                    <a class="baging__link facebook__link"
+                                                        href="https://www.facebook.com/profile.php?id=100074538741601">
+                                                        d</a>
+                                                    <i class="bi bi-facebook bi__about"></i>
+                                                </div>
+
+                                                <div class="col-1 parentBi__about">
+                                                    <a class="baging__link instagram__link"
+                                                        href="https://www.instagram.com/"> d</a>
+                                                    <i class="bi bi-instagram bi__about">
+                                                    </i>
+                                                </div>
+                                                <div class="col-1 parentBi__about">
+                                                    <a class="baging__link youtube__link"
+                                                        href="https://www.youtube.com/watch?v=Qm4r1fyz61Y"> d</a>
+                                                    <i class="bi bi-youtube bi__about"></i>
+                                                </div>
+                                                <div class="col-1 parentBi__about">
+                                                    <a class="baging__link telegram__link"
+                                                        href="https://web.telegram.org/z/"> d</a>
+                                                    <i class="bi bi-telegram bi__about"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row__about__me">
+                        <div class="container">
+                            <div class="row">
+                                <div
+                                    class="z-index col-xl-6 col-md-12 d-flex flex-column align-items-center pos-rel afterBackground col-12">
+                                    <div class="background__container"></div>
+                                    <h2 class="z-index text-center row__about__me__title roboto">ABOUT MYSELF</h2>
+                                    <p class="z-index about__info__text Ibarra">
+                                        Good day, my name is Roman Barna I am engaged in web development from scratch,
+                                        turnkey. I do layout and programming of sites, as well as refinement, adding
+                                        full functionality to the site! I am making adaptive layout using Bootstrap,
+                                        thus the site turns out beautiful on any device, be it a computer, laptop or
+                                        phone!
+                                    </p>
+                                    <p class="z-index about__info__text Ibarra">
+                                        At the moment, I am finishing courses at Step Academy. I recently finished
+                                        studying Jaqueria recently. The next stage of learning is Angular
+
+                                    </p>
+                                    <div class="row z-index d-flex justify-content-between mt-4">
+                                        <div class="col-12 text-center mb-2">
+                                            <h2>I'm starting <br> to study at the moment</h2>
+                                        </div>
+                                        <div class="col-3 z-index about__cards d-flex flex-column align-items-center">
+                                            <img class="logo__cards" src="./icons/angular.png" alt="logo">
+                                            <h5 class="text-center roboto">angular</h5>
+                                            <p class="about__cards__text text-center Ibarra">In the process of studying
+                                            </p>
+                                        </div>
+                                        <div class="col-3 z-index about__cards d-flex flex-column align-items-center">
+                                            <img class="logo__cards" src="./icons/react.jpg" alt="logo">
+                                            <h5 class="text-center roboto">react</h5>
+                                            <p class="about__cards__text text-center Ibarra">In the process of studying
+                                            </p>
+                                        </div>
+                                        <div class="col-3 z-index about__cards d-flex flex-column align-items-center">
+                                            <img class="logo__cards" src="./icons/scss.png" alt="logo">
+                                            <h5 class="text-center roboto">scss</h5>
+                                            <p class="about__cards__text text-center Ibarra">In the process of studying
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                                <div
+                                    class=" col-xl-6 col-md-9 col-12 d-flex flex-column fff align-items-end row__about__me_block">
+                                    <h2 class="row__about__me__SkillsTitle align-self-center ">My skills:</h2>
+                                    <div class="col-9 mb-3 progress__block">
+                                        <h4 class="Ibarra weight">HTML</h4>
+                                        <div class="progress">
+                                            <div class="progress-bar progressHtml bg-info" role="progressbar"
+                                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><span
+                                                    class="loadingCounter"></span></div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-9 mb-3 progress__block">
+                                        <h4 class="Ibarra weight">Css</h4>
+                                        <div class="progress">
+                                            <div class="progress-bar progressCss bg-info" role="progressbar"
+                                                aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><span
+                                                    class="loadingCounter"></span></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-9 mb-3 progress__block">
+                                        <h4 class="Ibarra weight">SCSS</h4>
+                                        <div class="progress">
+                                            <div class="progress-bar progressSCSS bg-info" role="progressbar"
+                                                aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><span
+                                                    class="loadingCounter"></span></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-9 mb-3 progress__block">
+                                        <h4 class="Ibarra weight">JAvaScript</h4>
+                                        <div class="progress">
+                                            <div class="progress-bar progressJS bg-info" role="progressbar"
+                                                aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><span
+                                                    class="loadingCounter"></span></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-9 mb-3 progress__block">
+                                        <h4 class="Ibarra weight">Git</h4>
+                                        <div class="progress">
+                                            <div class="progress-bar progressGit bg-info" role="progressbar"
+                                                aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><span
+                                                    class="loadingCounter"></span></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-9 mb-3 progress__block">
+                                        <h4 class="Ibarra weight">jQuery</h4>
+                                        <div class="progress">
+                                            <div class="progress-bar progressjQuery bg-info" role="progressbar"
+                                                aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><span
+                                                    class="loadingCounter"></span></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-9 mb-3 progress__block">
+                                        <h4 class="Ibarra weight">angular</h4>
+                                        <div class="progress">
+                                            <div class="progress-bar progressangular bg-info" role="progressbar"
+                                                aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><span
+                                                    class="loadingCounter"></span></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-9 mb-3 progress__block">
+                                        <h4 class="Ibarra weight">nodeJs</h4>
+                                        <div class="progress">
+                                            <div class="progress-bar progressnodeJs bg-info" role="progressbar"
+                                                aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><span
+                                                    class="loadingCounter"></span></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-9 mb-3 progress__block">
+                                        <h4 class="Ibarra weight">English</h4>
+                                        <div class="progress">
+                                            <div class="progress-bar progressSCSS bg-info" role="progressbar"
+                                                aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><span
+                                                    class="loadingCounter"></span></div><span class="Ibarra progressEnglish">/ Beginner</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row mt-5">
+                                <div class="d-flex justify-content-center">
+
+                                    <button type="button" class="btn about__btn">
+                                        <a class="roboto" href="#aboutMe">Scroll UP</a>
+                                        <div class="width__btn__download"></div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- myWorks -->
+
+            <section id="myWorks">
+                <div class="hhiden"></div>
+                <div class="parallax parallax-myWorks">
+
+                    <div class="block__title__contacts text-center ">
+                        <h1>My works</h1>
+
+                        <nav aria-label="breadcrumb ">
+                            <ul class="breadcrumb d-flex justify-content-center">
+                                <li class="nav-item breadcrumb-item">
+                                    <a class="nav-link" data-id="home" aria-current="page" href="#home">Home</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">My works</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <!--  -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12 col-12 d-flex justify-content-center align-items-center">
+                            <div id="filters" class="button-group filter-button-group mt-4">
+                                <button class="button roboto is-checked" data-filter="*">ALL</button>
+                                <button class="button roboto" data-filter=".WEBSITE">WEBSITE</button>
+                                <button class="button roboto" data-filter=".APPS">APPS</button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="grid"></div>
+                    </div>
+                </div>
+                <div class="container mt-5">
+                    <div class="row m-4">
+                        <div class="d-flex justify-content-center">
+                            <button type="button" id="about__btn" class="btn about__btn">
+                                <a class="roboto" href="#myWorks">Scroll UP</a>
+                                <div class="width__btn__download"></div>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!--  -->
+
+                <div class="container mb-3">
+                    <div class="row">
+                        <div class="slider__portfolio" data-slick='{"slidesToShow": 3, "slidesToScroll": 3}'></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- contacts -->
+
+            <section id="contacts">
+
+                <div class="parallax parallax-contact">
+                    <div class="block__title__contacts text-center ">
+                        <h1 class="roboto">Contact us</h1>
+                        <nav aria-label="breadcrumb ">
+                            <ul class="breadcrumb d-flex justify-content-center">
+                                <li class="nav-item breadcrumb-item">
+                                    <a class="nav-link" data-id="home" aria-current="page" href="#home">Home</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="row block__contacts">
+                    <div class="col-xl-6 col-md-12 col-12 d-flex flex-column align-items-center">
+                        <div class="row col-xl-9 col-md-9 col-12 mt-4">
+                            <div class="col-xl-6 col-md-6 col-6 offset-col-3">
+                                <div class="row contact__info mb-2">
+                                    <div class="col-3">
+                                        <i class="bi bi-house-door"></i>
+                                    </div>
+                                    <div class="col-9 d-flex flex-column justify-content-center">
+                                        <h5 class="form__title roboto">Lviv,</h5>
+                                        <p class="form__text Ibarra">Horodotska Street</p>
+                                    </div>
+                                </div>
+                                <div class="row contact__info mb-2">
+                                    <div class="col-3">
+                                        <i class="bi bi-telephone"></i>
+                                    </div>
+                                    <div class="col-9 d-flex flex-column justify-content-center">
+                                        <a class="phone__number roboto form__title" href="tel:+380732093038">+38 (073)
+                                            209-30-38</a>
+                                        <p class="form__text Ibarra">Mon to Fri 9am to 6 pm</p>
+                                    </div>
+                                </div>
+                                <div class="row contact__info mb-2">
+                                    <div class="col-3">
+                                        <i class="bi bi-envelope"></i>
+                                    </div>
+                                    <div class="col-9 d-flex flex-column justify-content-center">
+                                        <h5 class="form__title roboto">bilkasnikers@gmail.com</h5>
+                                        <p class="form__text Ibarra">Send us your query anytime!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-md-6 col-6 offset-col-3">
+                                <div class="row contact__input">
+                                    <div class="col-12">
+                                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                                            placeholder="Enter your name">
+                                        <div class="col-12 error">minimum 8 characters</div>
+                                    </div>
+                                </div>
+                                <div class="row contact__input">
+                                    <div class="col-12">
+                                        <input type="email" class="form-control" id="exampleFormControlInput2"
+                                            placeholder="Enter email address">
+                                        <div class="col-12 error">must follow the <br> email@mail.com format</div>
+                                    </div>
+                                </div>
+                                <div class="row contact__input">
+                                    <div class="col-12">
+                                        <input type="text" class="form-control" id="exampleFormControlInput3"
+                                            placeholder="Enter Subject">
+                                        <div class="col-12 error">minimum 4 characters</div>
+                                    </div>
+                                </div>
+                                <div class="row contact__input">
+                                    <div class="col-12">
+                                        <textarea class="form-control" placeholder="Enter message"
+                                            id="floatingTextarea2" style="height: 100px"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row contact__input">
+                            <div class="col-12 d-flex contact__btn__block justify-content-end">
+                                <button type="button" id="btnSubmit" class="btn btn-outline-light">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-md-12 col-12 d-flex mt-4 justify-content-center contact__info">
+                        <div id="map"></div>
+                    </div>
+                    <div class="hhiden"></div>
+                </div>
+
+            </section>
+
+        </main>
+        <!--  -->
+    </div>
+
+
+
+
+
+
+    <!-- TESTIMONIALS -->
+
+    <div class="container p-5">
+        <h2 class="TESTIMONIALS__revel text-center roboto">TESTIMONIALS</h2>
+        <div class="hhiden"></div>
+        <p class="TESTIMONIALS__revel text-center Ibarra">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Facilis, quasi.</p>
+        <div class="row TESTIMONIALS__slider TESTIMONIALS__revel">
+            <div class="col-10 offset-1 TESTIMONIALS">
+                <div class="block__TESTIMONIALS d-flex flex-column align-items-center">
+                    <img class="TESTIMONIALS__logo" src="./icons/TESTIMONIALS__logo-1.jpg" alt="">
+                    <h6 class="roboto">Mike Fisher</h6>
+                    <p class="Ibarra">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, deserunt
+                        eveniet veniam. Ipsam, nam, voluptatum"</p>
+                </div>
+                <div class="block__TESTIMONIALS d-flex flex-column align-items-center">
+                    <img class="TESTIMONIALS__logo" src="./icons/TESTIMONIALS__logo-2.jpg" alt="">
+                    <h6 class="roboto">Mike Fisher</h6>
+                    <p class="Ibarra">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, deserunt
+                        eveniet veniam. Ipsam, nam, voluptatum"</p>
+                </div>
+                <div class="block__TESTIMONIALS d-flex flex-column align-items-center">
+                    <img class="TESTIMONIALS__logo" src="./icons/TESTIMONIALS__logo-3.jpg" alt="">
+                    <h6 class="roboto">Mike Fisher</h6>
+                    <p class="Ibarra">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, deserunt
+                        eveniet veniam. Ipsam, nam, voluptatum"</p>
+                </div>
+                <div class="block__TESTIMONIALS d-flex flex-column align-items-center">
+                    <img class="TESTIMONIALS__logo" src="./icons/TESTIMONIALS__logo-4.jpg" alt="">
+                    <h6 class="roboto">Mike Fisher</h6>
+                    <p class="Ibarra">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, deserunt
+                        eveniet veniam. Ipsam, nam, voluptatum"</p>
+                </div>
+                <div class="block__TESTIMONIALS d-flex flex-column align-items-center">
+                    <img class="TESTIMONIALS__logo" src="./icons/TESTIMONIALS__logo-5.jpg" alt="">
+                    <h6 class="roboto">Mike Fisher</h6>
+                    <p class="Ibarra">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, deserunt
+                        eveniet veniam. Ipsam, nam, voluptatum"</p>
+                </div>
+                <div class="block__TESTIMONIALS d-flex flex-column align-items-center">
+                    <img class="TESTIMONIALS__logo" src="./icons/TESTIMONIALS__logo-6.webp" alt="">
+                    <h6 class="roboto">Mike Fisher</h6>
+                    <p class="Ibarra">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, deserunt
+                        eveniet veniam. Ipsam, nam, voluptatum"</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- footer -->
+
+    <footer class="load-hidden">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div
+                    class="footer__block  col-xl-3 col-lg-4 col-md-6 col-8 offset-col-2 d-flex justify-content-center align-items-center flex-column">
+                    <img src="./icons/branding-icon-png-0.jpg" class="logo__footer">
+                    <div class="hhiden"></div>
+                    <h1 class="mt-2 footer__text Ibarra">
+                        Hire me!
+                    </h1>
+                    <div class="row d-flex width100">
+                        <div class="col-3 d-flex justify-content-center pos-rel">
+                            <a class="baging__link baging__link-footer facebook__link"
+                                href="https://www.facebook.com/profile.php?id=100074538741601"> d</a>
+                            <i class="bi bi-facebook "></i>
+
+                        </div>
+                        <div class="col-3 d-flex justify-content-center pos-rel">
+                            <a class="baging__link baging__link-footer instagram__link"
+                                href="https://www.instagram.com/"> d</a>
+                            <i class="bi bi-instagram"></i>
+                        </div>
+                        <div class="col-3 d-flex justify-content-center pos-rel">
+                            <a class="baging__link baging__link-footer youtube__link"
+                                href="https://www.youtube.com/watch?v=Qm4r1fyz61Y"> d</a>
+                            <i class="bi bi-youtube"></i>
+                        </div>
+                        <div class="col-3 d-flex justify-content-center pos-rel">
+                            <a class="baging__link baging__link-footer telegram__link"
+                                href="https://web.telegram.org/z/"> d</a>
+                            <i class="bi bi-telegram"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__block block__none col-xl-3 col-lg-4 col-md-6 col-8 offset-col-2 text-center">
+                    <h3 class="title__insta__footer roboto">Instagram</h3>
+                    <div class="row instagram__img__block d-flex justify-content-center">
+                        <div class="col-4 footer__img pos-rel ">
+                            <a class="baging__link link-baging-img-insta instagram__link"
+                                href="https://www.instagram.com/"> d</a>
+                            <img src="./img/footer__img-1.png" class="img__instagram ">
+                        </div>
+                        <div class="col-4 footer__img pos-rel">
+                            <a class="baging__link link-baging-img-insta instagram__link"
+                                href="https://www.instagram.com/"> d</a>
+                            <img src="./img/footer__img-2.png" class="img__instagram ">
+                        </div>
+                        <div class="col-4 footer__img pos-rel">
+                            <a class="baging__link link-baging-img-insta instagram__link"
+                                href="https://www.instagram.com/"> d</a>
+                            <img src="./img/footer__img-3.png" class="img__instagram ">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__block block__none col-xl-3 col-lg-4 col-md-6 col-8 offset-col-2">
+                    <h4 class="title__menu__footer text-center roboto">QUICK LINKS</h4>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link nav-link-footer active-navBar" data-id="home" aria-current="page"
+                                        href="#home">Home<div class="after__link after__link__footer"></div></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link nav-link-footer" data-id="AboutMe" href="#aboutMe">About me<div
+                                            class="after__link after__link__footer"></div></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link nav-link-footer" data-id="myWorks" href="#myWorks">My works<div
+                                            class="after__link after__link__footer"></div></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link nav-link-footer" data-id="contact" href="#contacts">Contact<div
+                                            class="after__link after__link__footer"></div></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__block col-xl-3 col-lg-4 col-md-6 col-8 offset-col-2">
+                    <h3 class="title__menu__footer text-center roboto">
+                        SUBSCRIBE
+                    </h3>
+                    <p class="footer__text text-center">
+                        If I fall under your selection criteria, please contact me!
+                    </p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="btn-success" placeholder="Email"
+                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-light roboto" type="button" id="button-addon2">Button</button>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwPrFHf7ocdSNu2XRorp-pKq15iHD8vzk"></script>
+    </script>
+    <!-- alertyfly -->
+    <script src="./lib/alertyfly/alertify.min.js"></script>
+    <!-- jQuery -->
+    <script src="./lib/jQuery/jquery-3.6.0.min.js"></script>
+    <!-- chard -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- paginathing -->
+    <script type="text/javascript" src="./js/paginathing.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- isotope -->
+    <script src="./lib/isotope.pkgd.min.js"></script>
+    <!-- meterialize -->
+    <script src=""></script>
+    <!-- SimpleLightbox plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+    <!-- slick -->
+    <script src="./lib/slick-1.8.1 (1)/slick-1.8.1/slick/slick.min.js"></script>
+    <!--  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+    <script id="myScript" type="module" src="./js/script.js"></script>
+
+</body>
+
+</html>

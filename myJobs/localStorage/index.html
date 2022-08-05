@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+<link id="link" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link id="linkStylesheet" rel="stylesheet" href="">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<!-- Class work 1 -->
+
+
+
+    <select name="" id="optionThemes">
+        <option selected value="bootstrap.min">Dafault</option>
+        <option value="Litera">Litera</option>
+        <option value="Materia">Materia</option>
+        <option value="Minty">Minty</option>
+        <option value="Morph">Morph</option>
+    </select>
+
+
+
+
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+<button type="button" class="btn btn-link ">Link</button>
+
+
+<p id="visit"></p>
+
+
+
+<!-- Class work 2 -->
+<div class="container mt-5">
+    <div class="row h70 mt-5">
+        <div class="col-4 offset-4">
+            <label for="exampleInputText" class="form-label ">Color</label>
+    <input type="text" class="form-control " id="exampleInputText" aria-describedby="emailHelp">
+        <div class="error">color can only contain letters</div>
+</div>
+    </div>
+
+    <div class="row h70 mt-5">
+        <div class="col-4 offset-4">
+            <label for="exampleInputCode" class="form-label ">Code</label>
+    <select name="" id="typeOptions" class="form-control">
+        <option value="rgb">RGB</option>
+        <option value="rgba">RGBA</option>
+        <option value="HEX">HEX</option>
+    </select>
+</div>
+    </div>
+
+    <div class="row h70 mt-5 mb-5">
+        <div class="col-4 offset-4 mb-2">
+            <label for="exampleInputCode" class="form-label ">Code</label>
+    <input type="text" class="form-control " id="exampleInputCode" aria-describedby="emailHelp">
+    <div class="errorCode mt-1 mb-2"></div>
+</div>
+
+    </div>
+
+
+   
+    <div class="row">
+        <div class="col-4 offset-4">
+            <button id="btnAdd" type="button" class="btn btn-secondary btn-secondary-input  mt-5 ">Secondary</button>
+        </div>
+    </div>
+
+
+<h1 class="text-center mt-5">All Colors</h1>
+
+<div class="block__colors"></div>
+
+
+</div>
+
+
+
+
+
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,300&display=swap');
+
+
+/* div {
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+} */
+/* 
+.container {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hr {
+    width: 200px;
+    height: 3px;
+    background-color: red;
+}
+
+button {
+    border: none;
+    width: 150px;
+    background-color: red;
+    border-radius: 0 0 10px 10px;
+    color: #fff;
+}
+
+.block {
+    box-sizing: border-box;
+    background-color: rgb(247, 220, 220);
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+    display: none;
+}
+
+.container__modal {
+    width: 300px;
+    background-color: rgb(229, 229, 229);
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border: 1px solid #000;
+    display: none;
+    z-index: 1;
+}
+
+#btnModalOpen {
+    margin-top: 10px;
+} */
+.wrapper__link {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(226, 165, 79);
+    min-height: 100vh;
+    height: 100%;
+}
+
+
+/* 
+films */
+
+
+.block__sort {
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    display: none;
+}
+
+#sortYearUp, #sortYearDown {
+    border: none;
+    background-color: rgb(24, 179, 86);
+    border-radius: 7px;
+    color: #fff;
+    padding: 5px;
+    width: 80px;
+    cursor: pointer;
+}
+
+#sortYearUp {
+    margin: 0 20px;
+}
+
+#sortYearUp:active, #sortYearDown:active {
+    opacity: 0.7;
+    transition: 0.3s ease;
+}
+
+.close__sort {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    cursor: pointer;
+}
+
+.opasity {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.8;
+    display: none;
+    z-index: 999;
+}
+
+.container__films {
+    margin: 0 auto;
+    padding: 20px;
+    /* background-color: rgb(220, 220, 220); */
+    background-color: rgb(20, 19, 19);
+    color: #fff;
+    width: 400px;
+    text-align: center;
+    border-radius: 0 0 7px 7px;
+    position: relative;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.block__films {
+    border: 1px solid #fff;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+h4 {
+    padding: 0;
+    margin: 0;
+    
+}
+
+#inputTitle {
+    width: 163px;
+
+}
+
+.row {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+
+}
+
+label {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(255, 149, 0);
+}
+
+input {
+    background-color: rgb(255, 149, 0);
+    color: #fff;
+}
+input[type=text] {
+    padding-left: 7px;
+}
+
+select {
+    width: 162px;
+    padding: 2px;
+    background-color: rgb(255, 149, 0);
+    color: #fff;
+    cursor: pointer;
+}
+
+select > option {
+    cursor: pointer;
+}
+select:focus {
+    border: 1.5px solid #000;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+    border-radius: 2px;
+    outline: 1.5px solid #fff;
+}
+
+#btnSearch {
+    width: 250px;
+    border-radius: 5px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.block__list__film {
+    display: flex;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.film__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.img__films {
+    width: 150px;
+    height: 200px;
+}
+
+.films__info {
+    width: 50%;
+}
+
+/* info film */
+
+.info__film__type, .info__film__title, .info__film__year, .info__film__btn {
+    margin: 10px;
+}
+
+.info__film__title {
+    width: 100px;
+    height: 50px;
+    overflow: hidden;
+}
+
+
+
+.info__film__btn {
+    cursor: pointer;
+    background-color: rgb(24, 179, 86);
+    color: beige;
+    border: none;
+    border-radius: 5px;
+    padding: 3px 15px;
+}
+
+.info__film__btn:active {
+    opacity: 0.7;
+}
+
+/* window modal films info */
+
+.modal__window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    width: 50%;
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 4px #fff;
+    z-index: 1000;
+}
+
+
+.btnCloseModalWindow {
+    padding: 3px 15px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.img__modal__window{
+    width: 40%;
+    padding: 5px;
+}
+
+.table__modal__window {
+    width: 60%;
+}
+
+.modal__window > p {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+td, tr, table{
+    padding: 10px;
+    
+}
+
+td:first-child {
+    font-weight: 600;
+}
+
+/* loading */
+
+#loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    display: none;
+}
+
+.error > p {
+    width: 157px;
+    font-size: 13px;
+    background-color: #fff;
+    box-shadow: 0 0 4px 1px red;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: none;
+    color: #000;
+}
+.error {
+    display: flex;
+    justify-content: center;
+    margin-left: 91px;
+    
+}
+
+/* hover rating */
+
+.block__rating {
+    width: 40px;
+    padding: 5px;
+    background-color: #000;
+    box-shadow: 0 0 2px 2px #ddd;
+    color: #fff;
+    border-radius: 3px;
+    display: none;
+    position: fixed;
+    z-index: 1111;
+    top: 0;
+    left: 0;
+}

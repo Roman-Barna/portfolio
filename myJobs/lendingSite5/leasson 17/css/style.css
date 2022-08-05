@@ -1,0 +1,16 @@
+.btn-r{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.pr{
+    position: relative;
+    justify-content: end;
+    height: 300px;
+    overflow: auto;
+}
+/* .fixed{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+} */

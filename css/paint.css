@@ -1,0 +1,82 @@
+
+#drawApp, #canvas {
+    border: 1px solid #000;
+}
+
+#canvas {
+    transform: rotate(180deg);
+    margin-top: 50px;   
+}
+
+.container {
+    background-color: white;
+}
+
+.border {
+
+    box-shadow: 0 0 7px 5px #fff;
+}
+
+.block__coordinates{
+    border: 1px solid #000;
+    width: 1102px;
+    position: relative;
+    top: -5px;
+}
+
+.text__cor {
+    background-color: rgb(59, 59, 59);
+    color: #fff;
+    text-align: center;
+    padding: 3px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(59, 59, 59);
+    border: 1px solid #000;
+    width: 1102px;
+    padding: 3px;
+}
+.bi {
+    padding: 0;
+    margin: 0;
+        color: #fff;
+        cursor: pointer;
+        margin-left: 7px;
+}
+
+.block__center {
+    display: flex;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+}
+
+.center__number {
+    margin: 0 5px;
+}
+
+.center {
+    border: 1px solid #fff;
+    width: 15px;
+    height:15px;
+    padding: 1px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+.colors{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin:0 5px;
+    background-color: crimson;
+    cursor: pointer;
+}
+
+.block__right {
+    display: flex;
+}
