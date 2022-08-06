@@ -110,9 +110,9 @@ let is, isVolume
 let rotateCount = 0
 let countMusic = 0
 
-let arrayMusic = ['audio/2pac Feat. Dr. Dre - California Love.mp3',
-'audio/Dr. Dre Feat. Snoop Dogg - Still D.R.E..mp3',
-'audio/kara-kross_-_pora-vzroslet.mp3'
+let arrayMusic = ['audio/audio1.mp3',
+'audio/audio2.mp3',
+'audio/audio3.mp3'
 ]
 let arrayNameMusic = ['2pac Feat. Dr. Dre, California Love',
 'Dr. Dre Feat. Snoop Dogg, Still D.R.E.',

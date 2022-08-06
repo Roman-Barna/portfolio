@@ -666,10 +666,7 @@ $('.slider__portfolio').append(`
 
     // map
     navigator.geolocation.getCurrentPosition((position) => {
-        let map;
-        let { latitude, longitude } = position.coords
-        let coords = { lat: latitude, lng: longitude }
-
+        let coords = { lat: 49.8368512, lng: 24.018944 }
         map = new google.maps.Map(document.getElementById("map"), {
             center: coords,
             zoom: 16,
