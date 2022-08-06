@@ -150,11 +150,13 @@ $('.slider__portfolio').append(`
             window.open(evt.target.href, '_blank');
         })
     }
+    
     // link 
     inNewWindow($('.facebook__link'))
     inNewWindow($('.instagram__link'))
     inNewWindow($('.youtube__link'))
     inNewWindow($('.telegram__link'))
+    inNewWindow($('.linkGit'))
 
     // isotope.pkgd
     let $notifElem = $('.notification');
