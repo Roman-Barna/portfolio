@@ -1,4 +1,6 @@
 $(() => {
+    
+
     let arrayLinks = [
         {
             img: './img/portfolio__img__1.png',
@@ -71,11 +73,11 @@ $(() => {
         let tmpSize
         counter++
         if (counter % 3 == 0) {
-            tmpSize = 'grid-item--width2 grid-item--height3'
+            tmpSize = 'grid-item--height3'
         } else if (counter % 2 == 0) {
-            tmpSize = 'grid-item--width1 grid-item--height2'
+            tmpSize = 'grid-item--height2'
         } else {
-            tmpSize = 'grid-item--width3 grid-item--height2'
+            tmpSize = 'grid-item--height2'
         }
 
         if (item.filter == 'WEBSITE') {
@@ -195,7 +197,8 @@ $('.slider__portfolio').append(`
 
     $('.grid').masonry({
         itemSelector: '.grid-item',
-        columnWidth: 70
+        columnWidth:60,
+        gutter: 10
     });
 
     // slider portfolio
@@ -365,8 +368,8 @@ $('.slider__portfolio').append(`
                 } else {
                     clearInterval(interval)
                 }
-                count++
-            }, 30);
+                ++count
+            }, 50);
         }
     })
 
@@ -435,6 +438,7 @@ $('.slider__portfolio').append(`
                 $('.after__link').css('background-color', '#fff')
             }
             $('.navbar').css('background-color', '#000')
+            $('.navbar').css('padding-top', '40px')
         } else {
             if ($(`.active-navBar`).attr('data-id') == 'AboutMe') {
                 $('.nav-link').css('color', '#000')
@@ -442,6 +446,8 @@ $('.slider__portfolio').append(`
             }
             $('.navbar').css('background-color', 'transparent')
             $('.navbar').hide().slideDown(500)
+            $('.navbar').css('padding-top', '0px')
+           
         }
     })
 
@@ -665,11 +671,10 @@ $('.slider__portfolio').append(`
     //
 
     // map
-    navigator.geolocation.getCurrentPosition((position) => {
+    // navigator.geolocation.getCurrentPosition((position) => {})
         let coords = { lat: 49.8368512, lng: 24.018944 }
         map = new google.maps.Map(document.getElementById("map"), {
             center: coords,
             zoom: 16,
         });
-    })
 })

@@ -92,6 +92,7 @@
     border: 3px solid rgb(39, 31, 94);
     margin-bottom: 10px;
     border-radius: 5px;
+    overflow: hidden;
 }
 
 .block__library:hover {

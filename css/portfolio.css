@@ -116,6 +116,7 @@
 .navbar-toggler {
     border-color: #fff;
     background-color: #fff;
+    margin-right: 40px;
 }
 
 .after__link {
@@ -685,7 +686,7 @@ background: linear-gradient(229deg, rgba(4,73,77,1) 0%, rgba(113,176,174,1) 100%
 .grid-item {
     position: relative;
     float: left;
-    width: 180px;
+    width: 29.9%;
     height: 160px;
     border: 2px solid hsla(0, 2%, 22%, 0.5);
     border-radius: 5px;
@@ -696,13 +697,11 @@ background: linear-gradient(229deg, rgba(4,73,77,1) 0%, rgba(113,176,174,1) 100%
     justify-content: center;
     transition: 0.7s ease;
     border: 2px solid #fff;
-    box-shadow: 0 0 8px 4px #fff;
 
+    margin-bottom: 10px;
   }
 
-  .grid-item--width2 { width: 320px; }
-  .grid-item--width3 { width: 480px; }
-  .grid-item--width4 { width: 640px; }
+
   
   .grid-item--height2 { height: 200px; }
   .grid-item--height3 { height: 260px; }
@@ -949,6 +948,10 @@ h1.footer__text {
     opacity: 0.5;
 }
 
+.text-indent {
+    text-indent: 14px;
+}
+
 .bi-facebook,
 .bi-instagram,
 .bi-youtube,
@@ -1043,9 +1046,9 @@ h1.footer__text {
         width: 80%;
     }
 
-    .grid-item--width2 { width: 260px; }
-    .grid-item--width3 { width: 420px; }
-    .grid-item--width4 { width: 580px; }
+    .grid-item {
+        width: 46.6%;
+    }
     
     .grid-item--height2 { height: 160px; }
     .grid-item--height3 { height: 220px; }
@@ -1069,9 +1072,9 @@ h1.footer__text {
     .block__title__contacts > h1 {
         font-size: 28px;
     }
-    .grid-item--width2 { width: 200px; }
-    .grid-item--width3 { width: 340px; }
-    .grid-item--width4 { width: 420px; }
+    .grid-item {
+        width: 45.6%;
+    }
     
     .grid-item--height2 { height: 140px; }
     .grid-item--height3 { height: 200px; }
@@ -1079,7 +1082,9 @@ h1.footer__text {
 }
 
 @media screen and (max-width:576px)  {
-    
+    .block__hr__text__HTML__right, .block__hr__text__CSS__right, .block__hr__text__JS__right {
+        left: 50px;
+    }
     .container__background {
         top: 0px;
     }
@@ -1098,11 +1103,42 @@ h1.footer__text {
         display: none;
     }
 
-    .grid-item--width2 { width: 140px; }
-    .grid-item--width3 { width: 220px; }
-    .grid-item--width4 { width: 280px; }
+    .grid-item {
+        width: 90%;
+    }
     
     .grid-item--height2 { height: 140px; }
     .grid-item--height3 { height: 200px; }
     .grid-item--height4 { height: 280px; }
+}
+
+@media screen and (max-width:376px) {
+    .media375 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .grid-item {
+        width: 90%;
+        height: 25vh;
+    }
+    .progress__block {
+        width: 100%;
+    }
+    .mediaJCenter {
+        justify-content: center!important;
+    }
+    .about__cards {
+        flex-basis: 60%;
+        margin-top: 20px;
+    }
+    .about__my__foto {
+        width: 100%!important;
+    }
+    .console-container {
+        width: 90%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -25%);
+        font-size: 3em;
+    }
 }

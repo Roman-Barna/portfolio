@@ -1,4 +1,5 @@
-load()
+  load()
+
 function load() {
     
 
@@ -110,15 +111,16 @@ let is, isVolume
 let rotateCount = 0
 let countMusic = 0
 
-let arrayMusic = ['audio/audio1.mp3',
-'audio/audio2.mp3',
-'audio/audio3.mp3'
+let arrayMusic = ['./audio/Alyosha - Калина.mp3',
+'./audio/Maroon 5 - Memories.mp3',
+'./audio/Lewis Capaldi - Someone You Loved.mp3'
 ]
-let arrayNameMusic = ['2pac Feat. Dr. Dre, California Love',
-'Dr. Dre Feat. Snoop Dogg, Still D.R.E.',
-'kara-kross, pora-vzroslet'
+let arrayNameMusic = ['Alyosha - Калина',
+'Memories',
+'Lewis Capaldi - Someone You Loved'
 ]
-let imgArray = ['img/img1.jpg', 'img/img2.jpg', 'img/img3.webp']
+let imgArray = ["./images/ALYOSHA.jpg", "./images/Memories.jpg", "./images/Lewis Capaldi - Someone You Loved.jpg"]
+
 audio.src = arrayMusic[countMusic]
 resetName()
 let intLibery
@@ -172,12 +174,11 @@ function createLibrary() {
         block.appendChild(img)
         block.appendChild(text)
         img.src = imgArray[count]
-        let names = arrayNameMusic[count].split(',')
-        text.innerHTML = `${names[0]}<p style = "margin:0px;">${names[1]}</p>`
+        text.innerHTML = arrayNameMusic[count]
         block.addEventListener('click', () => {
             audio.src = element
             imgAudio.src = imgArray[id]
-            nameAudio.innerHTML = `${names[0]}<p style = "text-align: center;">${names[1]}</p>`
+            
             reset()
             play()
         })
@@ -186,10 +187,53 @@ function createLibrary() {
 }
 
 function resetName() {
-    let names = arrayNameMusic[countMusic].split(',')
-nameAudio.innerHTML = `${names[0]}<p style = "text-align: center;">${names[1]}</p>`
+    let names = arrayNameMusic[countMusic]
+nameAudio.innerHTML = `${names}`
 }
-
+// console.log(audio);
+// audio = new Audio(arrayMusic[countMusic]); 
+// console.log(audio);
+// async function play() {
+     
+//     audio.type = 'audio/wav';
+//     try {
+//       if (audio.paused) {
+//         if (audio.duration) {
+//             doSomething();
+//         } else {
+//             audio.onloadedmetadata = doSomething;
+//         }
+//         console.log(audio);
+//         audio = new Audio(arrayMusic[countMusic]); 
+//         console.log(audio);
+        
+//         biPlay.style.display = 'none'
+//         biStopCircle.style.display = 'block'
+//         audio.play()
+        
+//         intervalImg = setInterval(() => {
+//             rotateCount += 1
+//             imgAudio.style.transform = `rotate(${rotateCount}deg)`
+//         }, 10);
+//         intervalId = setInterval(() => {
+//             nextMusic()
+//             startTime.innerHTML =  splitTime(audio.currentTime)
+//             musicRange.value = audio.currentTime
+//         }, 1000)
+        
+//     } else {
+//         clearInterval(intervalId)
+//         clearInterval(intervalImg)
+//         audio.pause()
+//         biPlay.style.display = 'block'
+//         biStopCircle.style.display = 'none'
+//     }
+    
+//     } catch (err) {
+//       console.log('Failed to play...' + err);
+//     }
+//   }
+  
 function play() {
     if (audio.paused) {
         biPlay.style.display = 'none'
@@ -293,6 +337,26 @@ intervalId = setInterval(() => {
 
 clickPlay.addEventListener('click', () => {
     play()
+    // if (audio.paused) {
+    //     biPlay.style.display = 'none'
+    //     biStopCircle.style.display = 'block'
+    //     audio.play()
+    //     intervalImg = setInterval(() => {
+    //         rotateCount += 1
+    //         imgAudio.style.transform = `rotate(${rotateCount}deg)`
+    //     }, 10);
+    //     intervalId = setInterval(() => {
+    //         nextMusic()
+    //         startTime.innerHTML =  splitTime(audio.currentTime)
+    //         musicRange.value = audio.currentTime
+    //     }, 1000)
+    // } else {
+    //     clearInterval(intervalId)
+    //     clearInterval(intervalImg)
+    //     audio.pause()
+    //     biPlay.style.display = 'block'
+    //     biStopCircle.style.display = 'none'
+    // }
 })
 
 if (audio.duration) {
