@@ -1,6 +1,16 @@
 $(() => {
+    let navLink = $('.nav-link')
+    let afterLink = $('.after__link')
+    let loadingContainer = $('.loading__container')
+    let adaptiveAbout = $('.adaptiveAbout__row')
+    let aboutMyFoto = $('.about__my__foto')
+    let main = $('main')
+    let parallax = $('.parallax')
+    let loading = $('#loading')
+    let navbar = $('.navbar')
+    let textAboutTitle = $('#text__about_title')
+    let contentHtml = $(".content__html")
     
-
     let arrayLinks = [
         {
             img: './img/portfolio__img__1.png',
@@ -74,9 +84,8 @@ $(() => {
         counter++
         if (counter % 3 == 0) {
             tmpSize = 'grid-item--height3'
+            counter++
         } else if (counter % 2 == 0) {
-            tmpSize = 'grid-item--height2'
-        } else {
             tmpSize = 'grid-item--height2'
         }
 
@@ -85,7 +94,7 @@ $(() => {
         } else {
             tmp = 'APPS'
         }
-$('.grid').append(`
+        $('.grid').append(`
 <div class="grid-item parrent element__img__1 ${tmpSize} element-item  ${tmp} "
 data-category="${tmp}" data-href="${item.href}" data-cssHref="${item.cssHref}" data-src="${item.SrcJs}"
 data-filter = "">
@@ -95,52 +104,60 @@ data-filter = "">
 </div>
 `)
 
-// slider
+        // slider
 
-$('.slider__portfolio').append(`
+        $('.slider__portfolio').append(`
 <div class = "slider__block parrent"data-category="${tmp}" data-href="${item.href}" data-cssHref="${item.cssHref}" data-src="${item.SrcJs}">
 <button type="button" class="btn btn-outline-light btn__slider btn-outline-light-animate">Review
 </button>  
 <img class="WEBSITE" src="${item.img}" alt="">
 </div>
 `)
-}
+    }
 
     $('.btn-outline-light-animate').on('click', function () {
-        let tmpCss = $(this).parents('.parrent').attr('data-cssHref')
-        let srcJsLink = $(this).parents('.parrent').attr('data-src')
-        $(".content__html").load(`${$(this).parents('.parrent').attr('data-href')} .wrapper__link`, function (response, status, xhr) {
-            if (xhr.status == 200) {
-                let script = document.createElement('script')
-                script.src = srcJsLink
-                document.head.append(script)
-                $('.navbar').hide()
-                $('.loading__container').fadeIn(0, function () {
-                    document.body.style.overflow = 'hidden'
-                    $('#oldLinkCss').attr('href', '')
-                    $('#linkCss').attr('href', tmpCss)
-                    $(".modal__window__block").fadeIn(500)
-                })
-                $('.wrapper__link').css('margin-top', '55px')
+        let parent = '.parrent'
+        let tmpCss = $(this).parents(parent).attr('data-cssHref')
+        let srcJsLink = $(this).parents(parent).attr('data-src')
+        let oldLinkCss = $('#oldLinkCss')
+        let linkCss = $('#linkCss')
+        let modalWindowBlock = $(".modal__window__block")
+        let href = 'href'
 
-                // close
-
-                $('.close__window').on('click', function () {
-                    script.remove()
-                    $('#oldLinkCss').attr('href', './css/portfolio.css')
-                    $('#linkCss').attr('href', '')
-                    $('#myScript').attr('src', '')
-                    document.body.style.overflow = 'auto';
-                    setTimeout(() => {
-                        $('.navbar').slideDown(300)
-                    }, 500);
-                    $(".modal__window__block").fadeOut(500)
-                    $('.loading__container').fadeOut(500, function () {
+        //
+        contentHtml.load(`${$(this).parents(parent).attr('data-href')} .wrapper__link`,
+            function (response, status, xhr) {
+                if (xhr.status == 200) {
+                    let script = document.createElement('script')
+                    script.src = srcJsLink
+                    document.head.append(script)
+                    navbar.hide()
+                    loadingContainer.fadeIn(0, function () {
+                        document.body.style.overflow = 'hidden'
+                        oldLinkCss.attr(href, '')
+                        linkCss.attr(href, tmpCss)
+                        modalWindowBlock.fadeIn(500)
                     })
-                    $(".content__html").children().remove()
-                })
-            }
-        })
+                    $('.wrapper__link').css('margin-top', '55px')
+
+                    // close
+
+                    $('.close__window').on('click', function () {
+                        script.remove()
+                        oldLinkCss.attr(href, './css/portfolio.css')
+                        linkCss.attr(href, '')
+                        $('#myScript').attr('src', '')
+                        document.body.style.overflow = 'auto';
+                        setTimeout(() => {
+                            navbar.slideDown(300)
+                        }, 500);
+                        modalWindowBlock.fadeOut(500)
+                        loadingContainer.fadeOut(500, function () {
+                        })
+                        contentHtml.children().remove()
+                    })
+                }
+            })
     })
 
     // link function
@@ -152,16 +169,13 @@ $('.slider__portfolio').append(`
             window.open(evt.target.href, '_blank');
         })
     }
-    
+
     // link 
     inNewWindow($('.facebook__link'))
     inNewWindow($('.instagram__link'))
     inNewWindow($('.youtube__link'))
     inNewWindow($('.telegram__link'))
     inNewWindow($('.linkGit'))
-
-    // isotope.pkgd
-    let $notifElem = $('.notification');
 
     // init Isotope
     let $grid = $('.grid').isotope({
@@ -197,7 +211,7 @@ $('.slider__portfolio').append(`
 
     $('.grid').masonry({
         itemSelector: '.grid-item',
-        columnWidth:60,
+        columnWidth: 60,
         gutter: 10
     });
 
@@ -304,10 +318,13 @@ $('.slider__portfolio').append(`
     }
 
     // ScrollReveal
-
-    ScrollReveal().reveal('.home__block__title', {
+    let homeBlockTitle = '.home__block__title'
+    let animateRigth = 'animate__animated animate__backInRight'
+    let animateLeft = 'animate__animated animate__backInLeft'
+    let aboutBtn = $('.about__btn')
+    ScrollReveal().reveal(homeBlockTitle, {
         beforeReveal: function () {
-            $('.home__block__title').hide().show(500)
+            $(homeBlockTitle).hide().show(500)
         }
     })
     ScrollReveal().reveal('.block__hr', {
@@ -320,8 +337,8 @@ $('.slider__portfolio').append(`
     ScrollReveal().reveal('.parentBi__about', { interval: 200 })
     ScrollReveal().reveal('.row__about__me__title', {
         beforeReveal: function () {
-            $('.row__about__me__title').attr('class', 'animate__animated animate__backInLeft')
-            $('.SkillsTitle').attr('class', 'animate__animated animate__backInRight')
+            $('.row__about__me__title').attr('class', animateLeft)
+            $('.SkillsTitle').attr('class', animateRigth)
         }
     })
 
@@ -330,7 +347,7 @@ $('.slider__portfolio').append(`
     ScrollReveal().reveal('.about__info__text', {
         delay: 400,
         beforeReveal: function () {
-            $('.about__btn').addClass('animate__animated animate__backInRight')
+            aboutBtn.addClass(animateRigth)
             let count = 0
             let interval = setInterval(() => {
                 if (count <= 3) {
@@ -410,13 +427,12 @@ $('.slider__portfolio').append(`
             }, 1500);
         }
     )
-    
+
     // navigation
 
-    $('.active-navBar').children().hide().show(500)
+    $(`.active-navBar`).children().hide().show(500)
 
-    $('.nav-link').hover(function () {
-        console.log();
+    navLink.hover(function () {
         if (!$(this).hasClass('active-navBar')) {
             $(this).children().show(200)
         }
@@ -427,83 +443,82 @@ $('.slider__portfolio').append(`
             }
         })
 
-    $('.navbar').hide().slideDown(500)
+    navbar.hide().slideDown(500)
 
     // scroll event
 
     $(document).on('scroll', function () {
         if ($(this).scrollTop() > 0) {
             if ($(`.active-navBar`).attr('data-id') == 'AboutMe') {
-                $('.nav-link').css('color', '#fff')
-                $('.after__link').css('background-color', '#fff')
+                navLink.css('color', '#fff')
+                afterLink.css('background-color', '#fff')
             }
-            $('.navbar').css('background-color', '#000')
-            $('.navbar').css('padding-top', '40px')
+            navbar.css('background-color', '#000')
         } else {
             if ($(`.active-navBar`).attr('data-id') == 'AboutMe') {
-                $('.nav-link').css('color', '#000')
-                $('.after__link').css('background-color', '#000')
+                navLink.css('color', '#000')
+                afterLink.css('background-color', '#000')
             }
-            $('.navbar').css('background-color', 'transparent')
-            $('.navbar').hide().slideDown(500)
-            $('.navbar').css('padding-top', '0px')
-           
+            navbar.css('background-color', 'transparent')
+            navbar.hide().slideDown(500)
         }
     })
 
     // hide section nav
 
     $('section :first-child nav').hide()
-    $('.parallax').css('min-height', '50vh')
+    parallax.css('min-height', '50vh')
     //
 
     let intervalMenu
 
     window.onresize = function () {
-        if (window.innerWidth <= 768 && $(`.active-navBar`).attr('data-id') != 'home') {
-            $('.parallax').css({
+        let home = 'home'
+        if (window.innerWidth <= 768 && $(`.active-navBar`).attr('data-id') != home) {
+            parallax.css({
                 minHeight: '50vh'
             })
-        } else if (window.innerWidth >= 768 && $(`.active-navBar`).attr('data-id') != 'home') {
-            $('.parallax').css({
+        } else if (window.innerWidth >= 768 && $(`.active-navBar`).attr('data-id') != home) {
+            parallax.css({
                 minHeight: '100vh'
             })
-        } else if (window.innerWidth <= 768 && $(`.active-navBar`).attr('data-id') == 'home') {
-            $('.parallax').css({
+        } else if (window.innerWidth <= 768 && $(`.active-navBar`).attr('data-id') == home) {
+            parallax.css({
                 minHeight: '25vh'
             })
-        } else if (window.innerWidth >= 768 && $(`.active-navBar`).attr('data-id') == 'home') {
-            $('.parallax').css({
+        } else if (window.innerWidth >= 768 && $(`.active-navBar`).attr('data-id') == home) {
+            parallax.css({
                 minHeight: '50vh'
             })
         }
     }
 
-// loading
+    // loading
 
-    $('.loading__container').show()
-    $('#loading').show()
+    loadingContainer.show()
+    loading.show()
 
     intervalMenu = setTimeout(() => {
-        $('.loading__container').hide()
-        $('#loading').hide()
-        $('.navbar').hide().slideDown(500)
+        loadingContainer.hide()
+        loading.hide()
+        navbar.hide().slideDown(500)
         consoleText(['Hello, this is my site. My name is Roman, browse and see my portfolio!'], 'text', ['#fff']);
     }, 500);
-
-    $('.nav-link').on('click', function (event) {
-
+    //
+    navLink.on('click', function (event) {
+        let dataId = $(`.nav-link[data-id=${$(this).attr('data-id')}]`)
+        //
         event.preventDefault()
+        //
         $('#navbarSupportedContent').removeClass('show')
         $('.navbar-toggler').removeAttr('aria-expanded')
-
         //
         if ($(this).attr('data-id') == 'AboutMe') {
-            $('.nav-link').css('color', '#000')
-            $('.after__link').css('background-color', '#000')
+            navLink.css('color', '#000')
+            afterLink.css('background-color', '#000')
         } else {
-            $('.nav-link').css('color', '#fff')
-            $('.after__link').css('background-color', '#fff')
+            navLink.css('color', '#fff')
+            afterLink.css('background-color', '#fff')
         }
         //
         ScrollReveal().reveal('.hhiden', {
@@ -512,59 +527,59 @@ $('.slider__portfolio').append(`
         $(document).scrollTop(0)
 
         clearInterval(intervalMenu)
-        $('.loading__container').show()
-        $('#loading').show()
-
-        $('.nav-link').removeClass('active-navBar').children().hide()
-        $(`.nav-link[data-id=${$(this).attr('data-id')}]`).addClass('active-navBar')
-        $(`.nav-link[data-id=${$(this).attr('data-id')}]`).children().hide().show(500)
-
+        //
+        loadingContainer.show()
+        loading.show()
+        //
+        navLink.removeClass('active-navBar').children().hide()
+        dataId.addClass('active-navBar')
+        dataId.children().hide().show(500)
+        //
         intervalMenu = setTimeout(() => {
-            $('.loading__container').hide()
-            $('#loading').hide()
-            $('.navbar').hide().slideDown(500)
-
+            loadingContainer.hide()
+            loading.hide()
+            navbar.hide().slideDown(500)
         }, 500);
-
+        //
         if ($(this).attr('data-id') === 'home') {
-            $('.adaptiveAbout__row').removeClass('col-xl-6 col-xl-12').addClass('col-xl-12')
+            adaptiveAbout.removeClass('col-xl-6 col-xl-12').addClass('col-xl-12')
             $('.adaptiveAbout__row:eq(1)').removeClass('col-xl-12').addClass('col-xl-6 offset-xl-3 ')
-            $('.about__my__foto').css('width', '30%')
-            $('main').children().show()
+            aboutMyFoto.css('width', '20%')
+            main.children().show()
             $('section :first-child nav').hide()
-            $('.parallax').css('min-height', '50vh')
-            $('#text__about_title').css('color', 'white')
+            parallax.css('min-height', '50vh')
+            textAboutTitle.css('color', 'white')
         } else if ($(this).attr('data-id') === 'AboutMe') {
-            $('.adaptiveAbout__row').removeClass('col-xl-12 offset-xl-3').addClass('col-xl-6')
-            $('.about__my__foto').css('width', '50%')
+            adaptiveAbout.removeClass('col-xl-12 offset-xl-3').addClass('col-xl-6')
+            aboutMyFoto.css('width', '50%')
             ///
-            $('main').children().hide()
-            $('main').children('#aboutMe').show()
+            main.children().hide()
+            main.children('#aboutMe').show()
             ///
-            $('#text__about_title').css('color', 'black')
+            textAboutTitle.css('color', 'black')
             $('section :first-child nav').show()
-            $('.parallax').css('min-height', '100vh')
+            parallax.css('min-height', '100vh')
         } else if ($(this).attr('data-id') === 'myWorks') {
-            $('main').children().hide()
-            $('main').children('#myWorks').show()
+            main.children().hide()
+            main.children('#myWorks').show()
             $('section :first-child nav').show()
-            $('.parallax').css('min-height', '100vh')
+            parallax.css('min-height', '100vh')
         } else if ($(this).attr('data-id') === 'contact') {
-            $('main').children().hide()
-            $('main').children('#contacts').show()
+            main.children().hide()
+            main.children('#contacts').show()
             $('section :first-child nav').show()
-            $('.parallax').css('min-height', '100vh')
+            parallax.css('min-height', '100vh')
         }
-        $('.about__btn').hide().show(200)
+        aboutBtn.hide().show(200)
 
         if (window.innerWidth <= 768 && $(`.active-navBar`).attr('data-id') != 'home') {
-            $('.parallax').css({
+            parallax.css({
                 minHeight: '50vh'
             })
         }
 
         if (window.innerWidth >= 768 && $(`.active-navBar`).attr('data-id') != 'home') {
-            $('.parallax').css({
+            parallax.css({
                 minHeight: '100vh'
             })
         }
@@ -572,8 +587,7 @@ $('.slider__portfolio').append(`
 
     // validation contacts 
 
-    function validName(value, error) {
-        let pattern = /^[A-Za-z][A-Za-z0-9_]{7,29}$/
+    function valid(value, error, pattern) {
         let valid = pattern.test(value)
         if (valid) {
             error.css({
@@ -589,92 +603,63 @@ $('.slider__portfolio').append(`
             return false
         }
     }
-
-    function validEmail(value, error) {
-        let pattern = /^[a-zA-Z][a-z0-9]+@[a-z]+\.[a-z]{2,3}$/
-        let valid = pattern.test(value)
-        if (valid) {
-            error.css({
-                boxShadow: '0 0 8px 4px green'
-            })
-            error.slideUp(500)
-            return true
-        } else {
-            error.css({
-                boxShadow: '0 0 8px 4px red'
-            })
-            error.slideDown(500)
-            return false
-        }
-    }
-
-    function validSubject(value, error) {
-        let pattern = /^[A-Za-z][A-Za-z0-9_]{3,29}$/
-        let valid = pattern.test(value)
-        if (valid) {
-            error.css({
-                boxShadow: '0 0 8px 4px green'
-            })
-            error.slideUp(500)
-            return true
-        } else {
-            error.css({
-                boxShadow: '0 0 8px 4px red'
-            })
-            error.slideDown(500)
-            return false
-        }
-    }
-
-    $('#exampleFormControlInput1').on('blur', function () {
-        validName($(this).val(), $(this).next())
-    })
-
-    $('#exampleFormControlInput2').on('blur', function () {
-        validEmail($(this).val(), $(this).next())
-    })
-
-    $('#exampleFormControlInput3').on('blur', function () {
-        validSubject($(this).val(), $(this).next())
-    })
-
-    $('#btnSubmit').on('click', function () {
-        let validationName = validName($('#exampleFormControlInput1').val(), $('#exampleFormControlInput1').next())
-        let validationEmail = validEmail($('#exampleFormControlInput2').val(), $('#exampleFormControlInput2').next())
-        let validationSubject = validSubject($('#exampleFormControlInput3').val(), $('#exampleFormControlInput3').next())
-        if (validationName && validationEmail && validationSubject) {
-            $('.loading__container').show()
-            $('#loading').show()
-            alertify.set('notifier', 'position', 'top-center');
-            alertify.notify('Send your message!', 'custom', 2,);
-            setTimeout(() => {
-                $('.loading__container').hide()
-                $('#loading').hide()
-                $('.navbar').hide().slideDown(500)
-            }, 200);
-            $('#exampleFormControlInput3').val('')
-            $('#exampleFormControlInput2').val('')
-            $('#exampleFormControlInput1').val('')
-            $('#floatingTextarea2').val('')
-        }
-        if (!validationName) {
-            $('#exampleFormControlInput1').val('')
-        }
-        if (!validationEmail) {
-            $('#exampleFormControlInput2').val('')
-        }
-        if (!validationSubject) {
-            $('#exampleFormControlInput3').val('')
-        }
-    })
 
     //
 
+    let input1 = $('#exampleFormControlInput1')
+    let input2 = $('#exampleFormControlInput2')
+    let input3 = $('#exampleFormControlInput3')
+    //
+    let patternName = /^[A-Za-z][A-Za-z0-9_]{7,29}$/
+    let patternEmail = /^[a-zA-Z][a-z0-9]+@[a-z]+\.[a-z]{2,3}$/
+    let patternSub = /^[A-Za-z][A-Za-z0-9_]{3,29}$/
+    //
+    inputBlur(input1, patternName)
+    inputBlur(input2, patternEmail)
+    inputBlur(input3, patternSub)
+    //
+    function inputBlur(input, pattern) {
+        input.on('blur', function () {
+            valid($(this).val(), $(this).next(), pattern)
+        })
+    }
+    //
+    $('#btnSubmit').on('click', function () {
+        let validationName = valid(input1.val(), input1.next(), patternName)
+        let validationEmail = valid(input2.val(), input2.next(), patternEmail)
+        let validationSubject = valid(input3.val(), input3.next(), patternSub)
+        if (validationName && validationEmail && validationSubject) {
+            loadingContainer.show()
+            loading.show()
+            alertify.set('notifier', 'position', 'top-center');
+            alertify.notify('Send your message!', 'custom', 2,);
+            setTimeout(() => {
+                loadingContainer.hide()
+                loading.hide()
+                navbar.hide().slideDown(500)
+            }, 200);
+            input3.val('')
+            input2.val('')
+            input1.val('')
+            $('#floatingTextarea2').val('')
+        }
+        if (!validationName) {
+            input1.val('')
+        }
+        if (!validationEmail) {
+            input2.val('')
+        }
+        if (!validationSubject) {
+            input3.val('')
+        }
+    })
+
     // map
-    // navigator.geolocation.getCurrentPosition((position) => {})
-        let coords = { lat: 49.8368512, lng: 24.018944 }
-        map = new google.maps.Map(document.getElementById("map"), {
-            center: coords,
-            zoom: 16,
-        });
+
+    let coords = { lat: 49.8368512, lng: 24.018944 }
+    map = new google.maps.Map(document.getElementById("map"), {
+        center: coords,
+        zoom: 16,
+    });
+
 })
