@@ -1,12 +1,501 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="./lib/alertyfly/alertify.min.css">
+    <link rel="stylesheet" href="./lib/alertyfly/themes/default.min.css">
+    <link rel="stylesheet" href="./lib/alertyfly/themes/semantic.min.css">
+    <link rel="stylesheet" href="./lib/alertyfly/themes/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
+<div class="wrapper__link">
+    <div class="wrapper ">
+        <div class="modal-window">
+            <h2 class=" modal-window__title">Quick order</h2>
+            <form class="modal-window__form">
+                <div class="modal__content">
+                    <label for="">Name</label>
+                    <input type="text" class="contact__form-input">
+                </div>
+                <div class="modal__content">
+                    <label for="">Phone</label>
+                    <input type="text" class="contact__form-input">
+                </div>
+
+                <div class="modal__content">
+                    <label for="">E-mail</label>
+                    <input type="text" class="contact__form-input">
+                </div>
+
+                <div class="modal__content">
+                    <label for="">Comments</label>
+                    <textarea type="text" class="contact__form-input"></textarea>
+                </div>
+
+            </form>
+            <div class="modal__battons">
+                <div class="modal__btn-send">Send</div>
+                <div class="modal__btn-close">Close</div>
+            </div>
+        </div>
+
+        <div class="window__opasity"></div>
+
+
+
+
+        <header id="header" class="header">
+            <div class="header-top">
+                <div class="container">
+                    <div class="header__top-inner">
+                        <div class="logo">
+                            <a class="logo-link" href="#">
+                                <img class="logo__img" src="./icons/Logo.png" alt="">
+                            </a>
+                        </div>
+                        <div class="menu__burger"><span></span></div>
+                        <nav class="menu">
+                            <ul class="menu__list">
+                                <li class="menu__list-item">
+                                    <a href="#header" class="menu__link menu__link--active">HOME</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a href="#about" class="menu__link">ABOUT US</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a href="#portfolio" class="menu__link">PORTFOLIO</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a href="#team" class="menu__link">OUR TEAM</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a href="#pricing" class="menu__link">BLOG</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a href="#contact" class="menu__link">CONTACT</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="header-content">
+                <div class="container">
+                    <div class="header__content-inner">
+                        <h1 class="header__title scrollShow">
+                            OXYGEN
+                        </h1>
+                        <p class="header__description scrollShow">
+                            STARTER UI KIT
+                        </p>
+                        <div class="header__content-decor"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about__inner">
+                    <div class="title ">
+                        About Us
+                    </div>
+                    <div class="about__text">
+                        <p class="scrollShow">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium commodi totam culpa,
+                            dolorum asperiores iusto quidem, nesciunt hic eaque blanditiis enim, id maiores nam nobis
+                            dignissimos aliquam ad minus nisi. In, fuga blanditiis non cum cupiditate dolore,
+                            accusantium
+                            odio doloremque quibusdam dignissimos nemo sed nisi, similique, mollitia et! Autem laborum
+                            sint
+                            tenetur, earum facere veniam?
+                        </p>
+                        <p class="scrollShow">
+                            Sunt fugiat veniam consectetur soluta quia ex tempora quaerat, perferendis! Itaque a
+                            praesentium
+                            saepe ex distinctio aliquid quis laborum sit, porro dolor odio, iste eos laboriosam dolorum
+                            maiores harum reiciendis vitae doloribus illum voluptatibus nobis maxime assumenda ipsam
+                            tempora
+                            fugiat. Perspiciatis quibusdam hic cum tempore.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="expertise">
+            <div class="container">
+                <div class="title">Our Expertise</div>
+                <div class="expertise__content">
+                    <div class="expertise__content-items">
+                        <div class="expertise__content-item " data-width="90">BRANDING <span></span></div>
+                        <div class="expertise__content-item " data-width="65">DESIGN <span></span></div>
+                        <div class="expertise__content-item " data-width="78">DEVELOPMENT <span></span></div>
+                    </div>
+                    <div class="expertise__content-text">
+                        <p class="scrollShow">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium commodi totam culpa,
+                            dolorum asperiores iusto quidem, nesciunt hic eaque blanditiis enim, id maiores nam nobis
+                            dignissimos aliquam ad minus nisi.
+                        </p>
+                        <p class="scrollShow">
+                            Autem laborum sint tenetur, earum facere veniam? Sunt fugiat veniam consectetur soluta quia
+                            ex
+                            tempora quaerat, perferendis! Itaque a praesentium saepe ex distinctio aliquid quis
+                        </p>
+                    </div>
+                </div>
+                <div class="expertise__items">
+                    <div class="expertise__item scrollShow">
+                        <div class="expertise__item-title">
+                            GRAPHIC DESIGN
+                        </div>
+                        <div class="expertise__item-text">
+                            Lorem Ipsum Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis
+                            bibendum auctor, nisi elit consequat ipsum
+                        </div>
+                    </div>
+                    <div class="expertise__item scrollShow">
+                        <div class="expertise__item-title">
+                            WEB DEVELOPMENT
+                        </div>
+                        <div class="expertise__item-text">
+                            Lorem Ipsum Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis
+                            bibendum auctor, nisi elit consequat ipsum
+                        </div>
+                    </div>
+                    <div class="expertise__item scrollShow">
+                        <div class="expertise__item-title">
+                            MARKETING
+                        </div>
+                        <div class="expertise__item-text">
+                            Lorem Ipsum Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis
+                            bibendum auctor, nisi elit consequat ipsum
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+
+            <div class="container flex fullScreen">
+                <div class="features__img scrollShow"></div>
+                <div class="features__inner">
+                    <h1 class="title features__title">
+                        Let’s make magic.
+                    </h1>
+                    <div class="features__text">
+                        <p class="scrollShow">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero veniam odio itaque.
+                            Molestiae
+                            aut dicta accusantium quod, modi ad alias enim dolor delectus iusto! Inventore tempora
+                            labore
+                            nobis doloribus optio nulla sit corrupti nostrum, tempore debitis pariatur minus maiores
+                            velit,
+                            autem ex eum distinctio error fugit. Itaque voluptatum quam veritatis fuga impedit nulla
+                            dolor.
+                        </p>
+                        <p class="scrollShow">
+                            Nam dignissimos, ratione odit doloribus cum porro, aut. Ipsum nisi odio voluptatum, et,
+                            reprehenderit accusamus, est provident debitis dicta ullam esse assumenda, odit? Alias
+                            architecto enim pariatur libero ipsam mollitia maiores minus quibusdam numquam perspiciatis
+                            eveniet sit dolores eligendi inventore, ea voluptatum debitis iure, repellendus iste culpa!
+                            Voluptatibus quam ipsum nisi odit deserunt qui, consectetur ducimus, quis officia quaerat
+                            sapiente dolores, ad libero! Tenetur provident, omnis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <div class="portfolio__head">
+                    <h1 class="title portfolio__title">Portfolio</h1>
+                    <ul class="portfolio__buttons">
+                        <li class="portfolio__btn portfolio__btn--active" data-filter="*">ALL</li>
+                        <li class="portfolio__btn" data-filter="BRANDING">BRANDING</li>
+                        <li class="portfolio__btn" data-filter="PHOTOGRAPHY">PHOTOGRAPHY</li>
+                        <li class="portfolio__btn" data-filter="ILLUSTRATION">ILLUSTRATION</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="portfolio__items">
+                <div class="portfolio__item-img " data-filter="BRANDING">
+                    <div class="portfolio__item-curtain"></div>
+                    <div class="portfolio__item-title">OCCA CUPIDATAT</div>
+                    <div class="portfolio__item-destr">DESIGN</div>
+                </div>
+                <div class="portfolio__item-img " data-filter="PHOTOGRAPHY">
+                    <div class="portfolio__item-curtain"></div>
+                    <div class="portfolio__item-title">OCCA CUPIDATAT</div>
+                    <div class="portfolio__item-destr">DESIGN</div>
+                </div>
+                <div class="portfolio__item-img " data-filter="BRANDING">
+                    <div class="portfolio__item-curtain"></div>
+                    <div class="portfolio__item-title">OCCA CUPIDATAT</div>
+                    <div class="portfolio__item-destr">DESIGN</div>
+                </div>
+                <div class="portfolio__item-img " data-filter="ILLUSTRATION">
+                    <div class="portfolio__item-curtain"></div>
+                    <div class="portfolio__item-title">OCCA CUPIDATAT</div>
+                    <div class="portfolio__item-destr">DESIGN</div>
+                </div>
+                <div class="portfolio__item-img " data-filter="PHOTOGRAPHY">
+                    <div class="portfolio__item-curtain"></div>
+                    <div class="portfolio__item-title">OCCA CUPIDATAT</div>
+                    <div class="portfolio__item-destr">DESIGN</div>
+                </div>
+                <div class="portfolio__item-img " data-filter="BRANDING">
+                    <div class="portfolio__item-curtain"></div>
+                    <div class="portfolio__item-title">OCCA CUPIDATAT</div>
+                    <div class="portfolio__item-destr">DESIGN</div>
+                </div>
+                <div class="portfolio__item-img " data-filter="PHOTOGRAPHY">
+                    <div class="portfolio__item-curtain"></div>
+                    <div class="portfolio__item-title">OCCA CUPIDATAT</div>
+                    <div class="portfolio__item-destr">DESIGN</div>
+                </div>
+                <div class="portfolio__item-img " data-filter="ILLUSTRATION">
+                    <div class="portfolio__item-curtain"></div>
+                    <div class="portfolio__item-title">OCCA CUPIDATAT</div>
+                    <div class="portfolio__item-destr">DESIGN</div>
+                </div>
+                <div class="portfolio__item-img " data-filter="BRANDING">
+                    <div class="portfolio__item-curtain"></div>
+                    <div class="portfolio__item-title">OCCA CUPIDATAT</div>
+                    <div class="portfolio__item-destr">DESIGN</div>
+                </div>
+
+
+            </div>
+            <button class="portfolio__btn-all">VIEW MORE PROJECTS</button>
+        </section>
+
+        <section class="video">
+            <div class="video__quotes scrollShow">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ex itaque commodi libero magni quisquam!
+            </div>
+            <div class="video__quotes-author scrollShow">
+                Gilberd Hammont
+            </div>
+
+            <div class="video__conteiner scrollShow">
+                <video class="video__content">
+                    <source src="./video/pexels-sarowar-hussain-5946371.mp4" type="video/mp4">
+                </video>
+                <div class="playVideo bi bi-google-play"></div>
+            </div>
+        </section>
+
+        <section class="statistics">
+            <div class="container">
+                <div class="statistics__inner">
+                    <div class="statistics__item">
+                        <div class="statistics__num" data-count="305">0</div>
+                        <div class="statistics__text">Web Designs</div>
+                    </div>
+                    <div class="statistics__item">
+                        <div class="statistics__num" data-count="220">0</div>
+                        <div class="statistics__text">Logo Designs</div>
+                    </div>
+                    <div class="statistics__item">
+                        <div class="statistics__num" data-count="52">0</div>
+                        <div class="statistics__text">Print Designs</div>
+                    </div>
+                    <div class="statistics__item">
+                        <div class="statistics__num" data-count="88">0</div>
+                        <div class="statistics__text">Mobile Apps</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="slider">
+
+        </section>
+
+        <section id="team" class="team">
+            <div class="container">
+                <div class="title">Our Team</div>
+                <div class="team__items">
+                    <div class="team__item scrollShow">
+                        <img class="team__item-img" src="./images/team_img_1.png" alt="">
+                        <div class="team__item-name">BERNARD SPARKS</div>
+                        <div class="team__item-position">CEO</div>
+                    </div>
+                    <div class="team__item scrollShow">
+                        <img class="team__item-img" src="./images/team_img_2.png" alt="">
+                        <div class="team__item-name">MINERVA BENSON</div>
+                        <div class="team__item-position">Co-Founder</div>
+                    </div>
+                    <div class="team__item scrollShow">
+                        <img class="team__item-img" src="./images/team_img_3.png" alt="">
+                        <div class="team__item-name">JARED OLSON</div>
+                        <div class="team__item-position">Sales</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing">
+            <div class="container">
+                <div class="title">
+                    Pricing Plans
+                </div>
+                <div class="pricing__items">
+                    <div class="pricing__item scrollShow">
+                        <div class="pricing__item-name">
+                            Basic
+                        </div>
+                        <div class="pricing__item-race">
+                            29 <span>/ mo</span>
+                        </div>
+                        <ul class="pricing__list ">
+                            <li class="pricing__list-item">
+                                1 Logo Design
+                            </li>
+                            <li class="pricing__list-item">
+                                1 Website Design
+                            </li>
+                            <li class="pricing__list-item">
+                                1 Domain Free
+                            </li>
+                            <li class="pricing__list-item">
+                                3 Month License
+                            </li>
+                            <li class="pricing__list-item">
+                                1 GB Storage
+                            </li>
+                        </ul>
+                        <button class="pricing__btn">
+                            CHOOSE PLAN
+                        </button>
+                    </div>
+                    <div class="pricing__item scrollShow">
+                        <div class="pricing__item-name">
+                            Starter
+                        </div>
+                        <div class="pricing__item-race">
+                            50 <span>/ mo</span>
+                        </div>
+                        <ul class="pricing__list">
+                            <li class="pricing__list-item">
+                                2 Logo Design
+                            </li>
+                            <li class="pricing__list-item">
+                                2 Website Design
+                            </li>
+                            <li class="pricing__list-item">
+                                1 Domain Free
+                            </li>
+                            <li class="pricing__list-item">
+                                6 Month License
+                            </li>
+                            <li class="pricing__list-item">
+                                1 GB Storage
+                            </li>
+                        </ul>
+                        <button class="pricing__btn">
+                            CHOOSE PLAN
+                        </button>
+                    </div>
+                    <div class="pricing__item scrollShow">
+                        <div class="pricing__item-name">
+                            Professional
+                        </div>
+                        <div class="pricing__item-race">
+                            70 <span>/ mo</span>
+                        </div>
+                        <ul class="pricing__list">
+                            <li class="pricing__list-item">
+                                3 Logo Design
+                            </li>
+                            <li class="pricing__list-item">
+                                3 Website Design
+                            </li>
+                            <li class="pricing__list-item">
+                                2 Domain Free
+                            </li>
+                            <li class="pricing__list-item">
+                                12 Month License
+                            </li>
+                            <li class="pricing__list-item">
+                                2 GB Storage
+                            </li>
+                        </ul>
+                        <button class="pricing__btn">
+                            CHOOSE PLAN
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container contact-width">
+                <div class="contact__content">
+                    <div class="title">
+                        Get in Touch
+                    </div>
+                    <form class="contact__form" action="">
+                        <input class="contact__form-input scrollShow" type="text" placeholder="YOUR NAME">
+                        <input class="contact__form-input scrollShow" type="email" placeholder="VALID EMAIL">
+                        <textarea class="contact__form-input scrollShow" placeholder="YOUR MESSAGE" rows="7"></textarea>
+                        <button class="contact__btn scrollShow">SEND MESSAGE</button>
+                    </form>
+                </div>
+            </div>
+            <div id="contact__map" class="contact__map"></div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__contant">
+
+                    <div class="logo logo--line scrollShow">
+                        <a class="logo-link " href="#">
+                            <img class="logo__img" src="./icons/Logo.png" alt="">
+                        </a>
+                    </div>
+                    <div class="footer__social scrollShow">
+                        <a class="footer__social-link" href="#">FACEBOOK</a>
+                        <a class="footer__social-link" href="#">TWITTER</a>
+                        <a class="footer__social-link" href="#">GOOGLE+</a>
+                        <a class="footer__social-link" href="#">BEHANCE</a>
+                        <a class="footer__social-link" href="#">DRIBBLE</a>
+                        <a class="footer__social-link" href="#">INSTAGRAM</a>
+                    </div>
+                    <div class="footer__adress scrollShow">Mese Selimovica 52, Banja Luka - BiH</div>
+                    <a class="footer__phone scrollShow" href="tel:0038765252222">(00387) 65 252 222</a>
+                    <a class="footer__email scrollShow" href="mailTo:info@mail.com">info@mail.com</a>
+
+                </div>
+            </div>
+            <div class="footer__copy scrollShow">@2015 Oxygen Theme</div>
+        </footer>
+
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwPrFHf7ocdSNu2XRorp-pKq15iHD8vzk"></script>
+
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./lib/alertyfly/alertify.min.js"></script>
+
+    <script src="./js/script.js"></script>
+</div>
     
 </body>
+
 </html>

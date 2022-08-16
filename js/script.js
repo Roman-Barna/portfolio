@@ -13,6 +13,13 @@ $(() => {
     
     let arrayLinks = [
         {
+            img: './img/portfolio__img__11.png',
+            href: "./myJobs/practicsSCSS/index.html",
+            cssHref: './myJobs/practicsSCSS/css/style.css',
+            SrcJs: "./myJobs/practicsSCSS/js/script.js",
+            filter: 'APPS'
+        },
+        {
             img: './img/portfolio__img__1.png',
             href: "./myJobs/jQuery3/index.html",
             cssHref: './css/movie.css',
@@ -123,7 +130,6 @@ data-filter = "">
         let linkCss = $('#linkCss')
         let modalWindowBlock = $(".modal__window__block")
         let href = 'href'
-
         //
         contentHtml.load(`${$(this).parents(parent).attr('data-href')} .wrapper__link`,
             function (response, status, xhr) {
@@ -139,6 +145,8 @@ data-filter = "">
                         modalWindowBlock.fadeIn(500)
                     })
                     $('.wrapper__link').css('margin-top', '55px')
+
+                    
 
                     // close
 
